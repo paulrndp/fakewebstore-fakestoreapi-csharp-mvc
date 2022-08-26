@@ -14,18 +14,16 @@
                         <img src="@item.image" height="200" />
                     </div>
                     <div class="card-body" style="height:5rem;">
-                            <h6 class="card-title text-secondary">@item.title</h6>
+                        <h6 class="card-title text-secondary">@item.title</h6>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Price : <span class="badge bg-primary">@item.price</span></li>
                         <li class="list-group-item">Category : <span class="badge bg-success">@item.category</span></li>
+                        <li class="list-group-item">Rating : <span class="badge bg-warning">@item.rating.rate</span></li>
+                        <li class="list-group-item">Sell : <span class="badge bg-danger">@item.rating.count</span></li>
                     </ul>
                     <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
+                        <a href="@Url.ActionLink("Edit","Home", new { id = item.id })" class="card-link float-end">Manage</a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,57 @@
+﻿@model Product
+
+<form method="post">
+    <div class="row">
+        <div class="py-3 d-flex justify-content-center">
+            <div class="col-lg-7 col-12">
+                <div class="card bg-light">
+                    <div class="card-header">@Model.title</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product name</label>
+                            <input name="title" type="text" class="form-control" value="@Model.title">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product Description</label>
+                            <textarea name="description" class="form-control" rows="6">@Model.description</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product Price</label>
+                            <input name="price" type="text" class="form-control" value="@Model.price">
+                        </div>                          
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product Rating</label>
+                            <input name="rating.rate" type="text" class="form-control" value="@Model.rating.rate">
+                        </div>                          
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product Sell</label>
+                            <input name="rating.count" type="text" class="form-control" value="@Model.rating.count">
+                        </div>                        
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product Category</label>
+                            <input name="category" type="text" class="form-control" value="@Model.category">
+                        </div>                        
+                        <div class="form-group">
+                            <label class="form-label mt-4">Product Image</label>
+                            <input name="image" type="file" class="form-control" value="@Model.image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-7 col-12">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-secondary float-start">Back</button>
+                        <button type="submit" class="btn btn-primary float-end">Update</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
